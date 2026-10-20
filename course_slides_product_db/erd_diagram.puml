@@ -1,0 +1,44 @@
+@startuml
+skinparam linetype ortho
+skinparam monochrome false
+skinparam roundcorner 10
+skinparam class {
+    BackgroundColor White
+    ArrowColor #333333
+    BorderColor #555555
+}
+
+entity "City" as City {
+    * **Id** : int <<PK>>
+    --
+    City : varchar(30)
+}
+
+entity "Employee" as Employee {
+    * **Id** : int <<PK>>
+    --
+    Employee_Name : varchar(50)
+    Employee_Number : varchar(10)
+    Date_Hired : Date
+    * **City_Id** : int <<FK>>
+}
+
+entity "Salaried_Employee" as Salaried_Employee {
+    * **Id** : int <<PK>>
+    --
+    Annual_Salary : float
+    * **Employee_Id** : int <<FK>>
+}
+
+entity "Hourly_Employee" as Hourly_Employee {
+    * **Id** : int <<PK>>
+    --
+    Hourly_Rate : float
+    * **Employee_Id** : int <<FK>>
+}
+
+City ||--o{ Employee : "réside dans / localisé"
+Employee ||--o| Salaried_Employee : "est spécialisé en"
+Employee ||--o| Hourly_Employee : "est spécialisé en"
+
+@enduml
