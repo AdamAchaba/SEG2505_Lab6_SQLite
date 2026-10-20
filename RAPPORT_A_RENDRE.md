@@ -1,9 +1,8 @@
 # SEG2505 – Introduction au Génie Logiciel
 ## Rapport de Laboratoire 6 : SQLite et Android
 
-**Nom de l'étudiant :** [Votre Nom]  
-**Numéro d'étudiant :** [Votre Numéro d'étudiant]  
-**Dépôt GitHub :** [Lien vers votre dépôt GitHub personnel]  
+**Nom de l'étudiant :** Adam Achaba  
+**Dépôt GitHub :** https://github.com/AdamAchaba/SEG2505_Lab6_SQLite  
 
 ---
 
